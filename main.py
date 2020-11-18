@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from morse import morse
-client_token = "Nzc4NTQxNTg2NzA2OTg5MDY3.X7TfWg.NtsvEpIPP7YP_HgPPzHHQmwu1hg"
+client_token = ""
 
 client = commands.Bot(command_prefix="s!")
 
