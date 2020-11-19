@@ -1,9 +1,9 @@
 import discord
 from discord.ext import commands
 from morse import morse
-client_token = ""
+from config import client_token, cmd_prefix
 
-client = commands.Bot(command_prefix="s!")
+client = commands.Bot(command_prefix=cmd_prefix)
 
 
 @client.event
