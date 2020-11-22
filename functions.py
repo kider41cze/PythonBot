@@ -1,4 +1,4 @@
-def morse(string):
+def text2morse(string):
     morse = {
         "A": ".-",
         "B": "-...",
@@ -36,5 +36,9 @@ def morse(string):
 
 
 def log(ctx):
-    with open("log.txt", "a") as f:
-        f.write()
+    try:
+        with open("log.txt", "a") as f:
+            f.write(ctx)
+    except Exception:
+        print("Error has occured! Check functions.py (log)")
+        print(ctx)
