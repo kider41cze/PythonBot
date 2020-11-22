@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from morse import morse
+from functions import morse, log
 from config import client_token, cmd_prefix
 
 client = commands.Bot(command_prefix=cmd_prefix)
@@ -23,8 +23,7 @@ async def mor(msg, *, arg):
 async def on_message(msg):
     if msg.author == client.user:
         await client.process_commands(msg)
-    with open('log.txt', 'a') as f:
-        f.write(f'{str(msg.guild.name)}  -  {str(msg.author)}  =  {str(msg.content)}\n')
+    log(f'{str(msg.guild.name)}  -  {str(msg.author)}  =  {str(msg.content)}\n')
     await client.process_commands(msg)
 
 

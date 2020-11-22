@@ -33,3 +33,8 @@ def morse(string):
     for x in string:
         final += f" {morse[x]} "
     return final
+
+
+def log(ctx):
+    with open("log.txt", "a") as f:
+        f.write()
