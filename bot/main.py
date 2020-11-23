@@ -32,6 +32,7 @@ async def on_message(ctx):
     if ctx.author == client.user:
         await client.process_commands(ctx)
     log(f'{str(ctx.guild.name)}  -  {str(ctx.author)}  =  {str(ctx.content)}\n')
+    print(f'{str(ctx.guild.name)}  -  {str(ctx.author)}  =  {str(ctx.content)}\n')
     await client.process_commands(ctx)
 
 
