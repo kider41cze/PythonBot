@@ -26,6 +26,11 @@ async def morse(ctx, *, arg):
     morse_embed.add_field(name="Morse", value=text2morse(arg.upper()), inline=True)
     await ctx.send(embed=morse_embed)
 
+    
+@client.command(aliases=["remove", "c", "del"])
+async def clear(ctx, limit : int):
+    await ctx.channel.purge(limit=limit)
+    await ctx.send(f"Deleted by {ctx.author.mention}")
 
 @client.event
 async def on_message(ctx):
